@@ -1,13 +1,191 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+  --font-family: 'Manrope', sans-serif;
+
+  --gradient-text: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+  --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
+  --gradient-bar2: linear-gradient(103.22deg, #8ca01a -13.86%, #aa5e35 99.55%);
+
+  --color-bg: #040C18;
+  --color-footer : #031B34;
+  --color-blog: #042c54;
+  --color-text: #81AFDD;
+  --color-subtext: #FF8A71;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a{
+    color: unset;
+    text-decoration: none;
 }
+
+.gradient__bg
+
+{
+
+    /* ff 3.6+ */
+    background:-moz-linear-gradient(4deg, rgba(238, 238, 105, 1) 0%, rgba(248, 207, 117, 1) 48%, rgba(161, 144, 47, 1) 100%); 
+
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-linear-gradient(4deg, rgba(238, 238, 105, 1) 0%, rgba(248, 207, 117, 1) 48%, rgba(161, 144, 47, 1) 100%);
+
+    /* opera 11.10+ */
+    background:-o-linear-gradient(4deg, rgba(238, 238, 105, 1) 0%, rgba(248, 207, 117, 1) 48%, rgba(161, 144, 47, 1) 100%);
+
+    /* ie 6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#EEEE69', endColorstr='#A1902F', GradientType=1 );
+
+    /* ie 10+ */
+    background:-ms-linear-gradient(4deg, rgba(238, 238, 105, 1) 0%, rgba(248, 207, 117, 1) 48%, rgba(161, 144, 47, 1) 100%);
+
+    /* global 94%+ browsers support */
+    background:linear-gradient(4deg, rgba(238, 238, 105, 1) 0%, rgba(248, 207, 117, 1) 48%, rgba(161, 144, 47, 1) 100%);
+
+}
+
+.gradient__text {
+    background: var(--gradient-text);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-animation-fill-color: transparent;
+}
+
+.section__padding {
+
+    padding: 4rem 6rem; 
+}
+
+.section__margin{
+    margin: 4rem 6rem; 
+
+}
+
+.scale-up-center {
+	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+ @-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+
+  @media screen and (max-width: 550px){
+      .section__padding {
+          padding: 4rem;
+      }
+      .section__margin {
+          margin: 4rem; 
+      }
+  }
+
+  @media screen and (max-width: 700px){
+    .section__padding {
+        padding: 4rem 2rem;
+    }
+    .section__margin {
+        margin: 4rem 2rem; 
+    }
+}
+  
+/* *** Shop index code *** */
+
+shopBody {
+    font-family: 'Helvetica';
+  }
+
+  shoph1,
+  shoph2,
+  shoph3 {
+    margin: 0.5rem 0;
+  }
+
+  shoph1 {
+    font-size: 1.5rem;
+  }
+
+  shoph2 {
+    font-size: 1.2rem;
+  }
+
+  shoph3 {
+    font-size: 1rem;
+  }
+
+  shopa {
+    text-decoration: none;
+  }
+  .shoprow {
+    display: flex;  
+    justify-content: space-between;
+    margin-bottom: 4.15rem;
+  }
+  .shoprow.center {
+    align-items: center;
+  }
+  .shopcol-1 {
+    flex: 1;
+  }
+  .shopcol-2 {
+    flex: 2;
+  }
+  .shopblock {
+    background-color: #e0e0e0;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+  }
+  .shoptext-right {
+    text-align: right;
+  }
+  img.small {
+    max-height: 8rem;
+  }
+  button {
+    font-size: 0.8rem;
+    padding: 0.2rem;
+    margin: 0.1rem;
+    border-radius: 0.5rem;
+    border: 0.1rem #404040 solid;
+    background-color: #f0c040;
+    width: 100%;
+    cursor: pointer;
+  }
+  .add {
+    background-color: #40c0f0;
+    width: 1.5rem;
+  }
+  .remove {
+    background-color: #f04040;
+    width: 1.5rem;
+  }
+  .badge {
+    background-color: #f04040;
+    border: none;
+    color: #ffffff;
+    width: 1.5rem;
+  }
+
+  .shop_heading1{
+  font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 45px;
+    margin: 1rem 0;
+  }

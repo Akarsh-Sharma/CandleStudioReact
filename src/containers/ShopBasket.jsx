@@ -1,0 +1,73 @@
+import React from "react";
+
+const ShopBasket = function(props) {
+
+    
+    const { cartItems, onAdd, onRemove } = props;
+    const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
+    const taxPrice = itemsPrice * 0.14;
+    const shippingPrice = itemsPrice > 2000 ? 0 : 20;
+    const totalPrice = itemsPrice + taxPrice + shippingPrice;
+    return (
+      <aside className="shopblock shopcol-1">
+        <h2>Cart Items</h2>
+        <div>
+          {cartItems.length === 0 && <div>Cart is empty</div>}
+          {cartItems.map((item) => (
+            <div key={item.id} className="shoprow">
+              <div className="shopcol-2">{item.name}</div>
+              <div className="shopcol-2">
+                <button onClick={() => onRemove(item)} className="shopremove">
+                  -
+                </button>{' '}
+                <button onClick={() => onAdd(item)} className="shopadd">
+                  +
+                </button>
+              </div>
+  
+              <div className="shopcol-2 shoptext-right">
+                {item.qty} x ${item.price.toFixed(2)}
+              </div>
+            </div>
+          ))}
+  
+          {cartItems.length !== 0 && (
+            <>
+              <hr></hr>
+              <div className="shoprow">
+                <div className="shopcol-2">Items Price</div>
+                <div className="shopcol-1 shoptext-right">${itemsPrice.toFixed(2)}</div>
+              </div>
+              <div className="shoprow">
+                <div className="shopcol-2">Tax Price</div>
+                <div className="shopcol-1 shoptext-right">${taxPrice.toFixed(2)}</div>
+              </div>
+              <div className="shoprow">
+                <div className="shopcol-2">Shipping Price</div>
+                <div className="shopcol-1 shoptext-right">
+                  ${shippingPrice.toFixed(2)}
+                </div>
+              </div>
+  
+              <div className="shoprow">
+                <div className="shopcol-2">
+                  <strong>Total Price</strong>
+                </div>
+                <div className="shopcol-1 shoptext-right">
+                  <strong>${totalPrice.toFixed(2)}</strong>
+                </div>
+              </div>
+              <hr />
+              <div className="shoprow">
+                <button onClick={() => alert('Implement Checkout!')}>
+                  Checkout
+                </button>
+              </div>
+            </>
+          )}
+        </div>
+      </aside>
+    );
+  }
+
+export default ShopBasket;

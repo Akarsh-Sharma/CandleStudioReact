@@ -1,0 +1,42 @@
+.candleStudio__contactUs-heading {
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 65px;
+    margin: 1rem 0;
+    margin-bottom: 2rem;
+    text-align: center;
+    
+}
+
+.candleStudio__contactUs-content h3
+{
+    color: var(--color-text);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 3px;
+
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.candleStudio__contactUs-content h2 {
+
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 45px;
+    margin: 1rem 0;
+    
+}
+
+.candleStudio__contactUs-content h1 {
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 45px;
+    margin: 1rem 0;
+    text-align: center;
+}
+

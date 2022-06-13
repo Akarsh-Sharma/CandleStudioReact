@@ -1,0 +1,96 @@
+.candleStudio__reviewsCandleStudio {
+    display: flex;
+    flex-direction: row;
+}
+
+.candleStudio__reviewsCandleStudio-heading {
+    width: 80%;
+    text-align: left;
+
+    margin-bottom: 12rem;
+    margin-right: 1rem;
+}
+
+.candleStudio__reviewsCandleStudio-heading h1 {
+    font-size: 42px;
+    line-height: 75px;
+    font-family: var(--font-family);
+    font-weight: 800;
+}
+
+.candleStudio__reviewsCandleStudio-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.candleStudio__reviewsCandleStudio-container_groupA {
+    flex: 1;
+    margin-right: 1rem;
+    max-height: 500px;
+    max-width: 70%;
+}
+
+.candleStudio__reviewsCandleStudio-container_groupB {
+    flex: 1;
+
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    max-height: 450px;
+    margin-top: 2rem;
+
+
+    margin-right: 1rem;
+}
+
+.candleStudio__reviewsCandleStudio-container_groupC {
+    flex: 1;
+
+    display:grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1rem;
+    max-height: 200px;
+    max-width: 300px;
+}
+
+@media screen and (max-width: 990px) {
+    .candleStudio__reviewsCandleStudio-container {
+        flex-direction: column-reverse;
+    }
+
+
+    .candleStudio__reviewsCandleStudio-container_groupA {
+        margin: 2rem 0;
+    }
+
+    .candleStudio__reviewsCandleStudio-container_groupA .candleStudio__reviewsCandleStudio-container_article  {
+       width: 48%;
+    }
+
+    .candleStudio__reviewsCandleStudio-container_groupA .candleStudio__reviewsCandleStudio-container_article-image {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .candleStudio__reviewsCandleStudio-container_groupB {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .candleStudio__reviewsCandleStudio-container_groupA .candleStudio__reviewsCandleStudio-container_article  {
+       width: 100%;
+    }
+
+    .candleStudio__reviewsCandleStudio-heading h1 {
+        font-size: 46px;
+        line-height: 52px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .candleStudio__reviewsCandleStudio-heading h1 {
+        font-size: 34px;
+        line-height: 42px;
+    }
+
+}

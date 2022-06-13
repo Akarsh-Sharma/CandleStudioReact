@@ -1,0 +1,56 @@
+.candleStudio__aboutCandleStudio {
+    display: flex;
+    flex-direction: row;
+}
+
+.candleStudio__aboutCandleStudio-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+
+    margin-right: 3rem;
+}
+
+.candleStudio__aboutCandleStudio-image img {
+    width: 80%;
+    height: 80%;
+}
+
+.candleStudio__aboutCandleStudio-content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: flex-start;
+}
+
+.candleStudio__aboutCandleStudio-content h4 {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    color: #71E5FF;
+}
+
+.candleStudio__aboutCandleStudio-content h4:last-child {
+    color: #ff8A71;
+}
+
+.candleStudio__aboutCandleStudio-content h1 {
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 45px;
+    margin: 1rem 0;
+}
+
+.candleStudio__aboutCandleStudio-content p {
+    color: var(--color-text);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+
+    margin-bottom: 2rem;
+}
